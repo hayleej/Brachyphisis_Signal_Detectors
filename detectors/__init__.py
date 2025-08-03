@@ -1,7 +1,7 @@
 import abc
 import numpy as np
-from MyDetector.utils.audio_processing import get_filtered_audio_from_file
-from MyDetector.utils.filesystem.audiofiles import AudioFiles
+from Brachyphisis_Signal_Detectors.utils.audio_processing import get_filtered_audio_from_file
+from Brachyphisis_Signal_Detectors.utils.filesystem.audiofiles import AudioFiles
 import pandas as pd
 
 class BaseDetector(metaclass=abc.ABCMeta):
@@ -10,7 +10,6 @@ class BaseDetector(metaclass=abc.ABCMeta):
         self.files = files
         self.max_interval_len = max_interval_length
         self.min_disyllabic_len = min_disyllabic_len
-        #self.filtered_audio, audio_data, self.sample_rate = get_filtered_audio(self.filename,self.filter_cutoff_freq)
         self.result = None
         self.all_selections = None
         self.filtered_audio = None

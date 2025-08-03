@@ -2,10 +2,11 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from MyDetector.utils.filesystem.selectionfiles import SelectionFiles
-from MyDetector.utils.segment import Segments
+from Brachyphisis_Signal_Detectors.utils.filesystem.selectionfiles import SelectionFiles
+from Brachyphisis_Signal_Detectors.utils.segment import Segments
 from sklearn.metrics import balanced_accuracy_score
 
+# To score the accuracy of the detectors
 
 class SCORE:
     FALSE_NEG = 2
@@ -115,9 +116,6 @@ class SCORE:
 
     def scores_for_pr_curve(self, tag_name='Brachyphisis'):
 
-        #manual_filename = f"/Volumes/EbonyForest/EbonyForest/site06/deployment_001/{filename}_manual_annotations.txt"
-        # manual_filename = "/Volumes/EbonyForest/EbonyForest/site06/Brachyphisis_only.txt"
-        
         man_annotation = self.manual_selection.combine_selection_files()
         selections = self.detector_selection.combine_selection_files()
 
@@ -134,9 +132,6 @@ class SCORE:
 
     def scores_for_model(self, write_file, tag_name='Brachyphisis'):
 
-        #manual_filename = f"/Volumes/EbonyForest/EbonyForest/site06/deployment_001/{filename}_manual_annotations.txt"
-        # manual_filename = "/Volumes/EbonyForest/EbonyForest/site06/Brachyphisis_only.txt"
-        
         man_annotation = self.manual_selection.combine_selection_files()
         selections = self.detector_selection.combine_selection_files()
 
