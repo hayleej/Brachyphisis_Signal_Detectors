@@ -1,7 +1,7 @@
 import abc
 import numpy as np
-from Brachyphisis_Signal_Detectors.utils.audio_processing import get_filtered_audio_from_file
-from Brachyphisis_Signal_Detectors.utils.filesystem.audiofiles import AudioFiles
+from utils.audio_processing import get_filtered_audio_from_file
+from utils.filesystem.audiofiles import AudioFiles
 import pandas as pd
 
 class BaseDetector(metaclass=abc.ABCMeta):

@@ -2,8 +2,8 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from Brachyphisis_Signal_Detectors.utils.filesystem.selectionfiles import SelectionFiles
-from Brachyphisis_Signal_Detectors.utils.segment import Segments
+from utils.filesystem.selectionfiles import SelectionFiles
+from utils.segment import Segments
 from sklearn.metrics import balanced_accuracy_score
 
 # To score the accuracy of the detectors

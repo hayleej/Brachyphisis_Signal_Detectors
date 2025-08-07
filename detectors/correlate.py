@@ -2,7 +2,7 @@ from . import BaseDetector
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import correlate
-from Brachyphisis_Signal_Detectors.utils.audio_processing import get_audio_segment
+from utils.audio_processing import get_audio_segment
 
 class CorrelateDetector(BaseDetector):
     def __init__(self,files, template_filename,template_start_time=0.062,template_end_time=0.144, filter_cutoff_freq=17000,max_interval_length=12000,min_disyllabic_len=5000,threshold=0.0125,write_path=None) -> None:
